@@ -1,0 +1,14 @@
+.app-footer {
+  height: 80px;
+  background-image: url('../../images/add.png');
+  background-repeat: no-repeat;
+  background-size: cover; 
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.app-footer p {
+  font-weight: 100;
+}

@@ -1,0 +1,26 @@
+.mobile-info {
+  background-image: url('../../images/left.png');
+  background-repeat: no-repeat;
+  background-size: cover; 
+  padding: 2em 1.7em;
+}
+
+.mobile-info .title, .subtitle {
+  margin: 15px 0;
+}
+
+.mobile-info .subtitle {
+  font-weight: 200;
+}
+
+.mobile-info .info {
+  margin: 20px 0;
+}
+
+#amount {
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 2px;
+  border-radius: 2px; 
+  color: #fff
+}

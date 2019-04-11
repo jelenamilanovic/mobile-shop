@@ -1,0 +1,8 @@
+.mobile-image {
+  background-image: url('../../images/mid.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
