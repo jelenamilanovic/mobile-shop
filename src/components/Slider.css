@@ -1,0 +1,18 @@
+.slider {
+  position: absolute;
+  top: 33%;
+  right: 20px;
+}
+
+.slider .indicator {
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  margin: 10px 0;
+  color: transparent;
+  border: 3px solid silver;
+}
+
+.indicator.is-active {
+  background: #f9f9f9
+}

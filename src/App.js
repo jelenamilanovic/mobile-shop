@@ -5,6 +5,7 @@ import AppFooter from './components/footer/AppFooter';
 import AppHeader from './components/header/AppHeader';
 import MobileInfo from './components/mobile-info/MobileInfo';
 import MobileImage from './components/mobile-image/MobileImage';
+import Slider from './components/Slider';
 
 import b1 from './images/b1.png'
 import b2 from './images/b2.png'
@@ -34,7 +35,8 @@ class App extends Component {
       yellow: [y1, y2, y3],
       black: [bl1, bl2, bl3]
     },
-    selectedImage: b1
+    selectedImage: b1,
+    imageNum: 1
   }
 
   changeColor = color => {
@@ -56,23 +58,35 @@ class App extends Component {
       this.setState({...this.state, amount: 0})
     }
   }
+
+  changePosition = position => {
+    let imageNum = position;
+    let selectedImage = this.state.images[this.state.selectedColor][--position]
+    this.setState({
+      ...this.state,
+      selectedImage,
+      imageNum
+    })
+  }
   
   render() {
-    console.log('st', this.state)
     return (
       <div className="App">
         <div className="container">
           <AppHeader inCart={this.state.amount}/>
 
+          <div className="mobile-wrapper">
           <div className="mobile">
             <MobileInfo colors={this.state.colors} 
                         selectedColor={this.state.selectedColor} 
                         changeColor={this.changeColor}
                         amount={this.state.amount}
                         setAmount={this.setAmount} />
-            <MobileImage selectedImage={this.state.selectedImage} />
+            <MobileImage selectedImage={this.state.selectedImage}/>
           </div>
-          
+          <Slider imageNum={this.state.imageNum} changePosition={this.changePosition}/>
+          </div>
+
           <AppFooter/>
         </div>
       </div>

@@ -23,3 +23,7 @@
   flex: 1 1 50%;
 }
 
+.mobile-wrapper {
+  position: relative;
+}
+
